@@ -48,9 +48,11 @@ if __name__ =="__main__":
 from flask import Flask, request, jsonify
 import numpy as np
 import joblib
+from flask_cors import CORS
 
 app = Flask(__name__)
 
+CORS(app)
 # Load the pre-trained model (pipeline)
 #model = joblib.load('placement_model.pkl')
 
